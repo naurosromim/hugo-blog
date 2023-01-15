@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ $options := (dict "targetPath" "style.css" "outputStyle" "compressed" ) }}
+    {{ $style := resources.Get "main.scss" | resources.ToCSS $options }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+    {{ if .IsHome }}
+    <title>{{ .Site.Title }}</title>
+    {{ else }}
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    {{ end }}
+    
+</head>
+<body>
+    <header>
+        <div class="container">{{ partial "header" . }}</div>
+    </header>
+    <main>
+        <div class="container">
+            {{ block "main" . }}
+            {{ .Content }}
+            {{ end }}
+        </div>
+    </main>
+    <footer>
+        <div class="container">{{ partial "footer" . }}</div>
+    </footer>
+</body>
+</html>

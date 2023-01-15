@@ -1,0 +1,32 @@
+{{ define "main" }}
+
+<h1>{{ .Title }}</h1>
+
+    <div class="split-col">
+        {{ range .Paginator.Pages }}
+        <div class="post-card">
+            <h2><a href="{{ .Permalink }}"> {{ .Title }}</a></h2>
+            <p>{{ .Summary }}</p>
+            <time>{{ .Date | time.Format ":date_long" }}</time>
+            <ul class="tags-post-card">
+                {{ range (.GetTerms "tags") }}
+                <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+            {{ end }}
+            </ul>
+        </div>
+        {{ end }}
+    </div>
+
+<div class="pagination centering">
+    {{ if .Paginator.HasPrev }}
+    <a href="{{ .Paginator.Prev.URL }}">পুর্ববর্তি</a>
+    {{ end }}
+    
+    &ensp;
+    
+    {{ if .Paginator.HasNext }}
+    <a href="{{ .Paginator.Next.URL }}">পরবর্তী</a>
+    {{ end }}
+</div>
+
+{{ end }}

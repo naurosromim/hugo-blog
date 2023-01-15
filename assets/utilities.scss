@@ -1,0 +1,48 @@
+.container{
+    padding: 1rem;
+    max-width: 70ch;
+    margin-inline: auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.centering{
+    display: grid;
+    place-content: center;
+}
+
+.post-card{
+    background-color: $clr-post-card-bg;
+    padding-inline: clamp(.9rem,.9rem,1.5rem);
+    padding-block: 1rem;
+    border-radius: 2%;
+    min-width: 100%;
+}
+
+.split-col{
+    display: grid;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+.tags-post-card{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.pagination{
+    padding-block: 3rem;
+    display: flex;
+    direction: row;
+    gap: 2rem;
+}
+
+.post-header{
+    border-bottom: 1px solid $clr-hr;
+    padding-block: 1rem;
+    margin-bottom: 2rem;
+}

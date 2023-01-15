@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+<h1> {{ .Title }} </h1>
+
+<h1>taxonomy.html</h1>
+
+{{ range .Pages }}
+<li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+{{ end }}
+
+{{ end }}

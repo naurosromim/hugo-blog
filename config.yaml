@@ -1,0 +1,33 @@
+baseURL: 'http://example.org/'
+languageCode: 'bn'
+title: 'বাংলা হিউগো থিম'
+defaultContentLanguage: 'bn'
+paginate: 3
+
+params:
+  description: "একটি হিউগো বাংলা থিম।"
+  facebook: '#'
+  instagram: '#'
+  github: '#'
+  linkedin: '#'
+
+taxonomies:
+  tag: tags
+
+menu:
+  main:
+    - name: হোম
+      url: /
+      weight: 1
+    - name: আর্কাইভ
+      url: /blog
+      weight: 2
+    - name: আমার পরিচয়
+      url: /about
+      weight: 3
+    - name: যোগাযোগ
+      url: /contact
+      weight: 4
+    - name: সকল ট্যাগ
+      url: /tags
+      weight: 5

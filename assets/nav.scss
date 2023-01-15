@@ -1,0 +1,31 @@
+header {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+
+nav{
+    a,a[visited]{
+        display: inline-block;
+        text-decoration: none;
+    }
+    a[hover]{
+        color: $clr-nav;
+        cursor: pointer;
+    }
+
+    ul{
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        li{
+            display: inline-block;
+        }
+    }
+}
+
+footer{
+    text-align: center;
+}
