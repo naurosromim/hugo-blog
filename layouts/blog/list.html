@@ -9,7 +9,7 @@
             <p>{{ .Summary }}</p>
             <time>{{ .Date | time.Format ":date_long" }}</time>
             <p><time>{{ .Date | time.Format ":date_short" }}</time></p>
-            <p><time>{{ .Date }}</time></p>
+            <p><time>{{ .Date.Format "02/01/2006" }}</time></p>
             <ul class="tags-post-card">
                 {{ range (.GetTerms "tags") }}
                 <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
